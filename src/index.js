@@ -1,17 +1,17 @@
 import '../scss/index.scss';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
 
 class App {
     constructor() {
-        this.message = "I am ready to go";
+        this.message = "Boostrap Is Working!";
     }
 
     render(container) {
-        console.log(container);
+        const alert = document.createElement('div');
+        alert.innerHTML = this.message;
+        alert.setAttribute("class", "alert alert-success m-5");
 
-        const h1 = document.createElement('div');
-        h1.innerHTML = '<h1>' + this.message + '</h1>';
-
-        container.appendChild(h1);
+        container.appendChild(alert);
 
     }
 }
